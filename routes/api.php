@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('excel/export','Admin\ExcelController@export');
+Route::post('excel/articleImport','Admin\ExcelController@articleImport')->name('article.import');
+
+
+	//上传
+	//Route::post('img/upload','Admin\FileController@imgUpload')->name('img.upload');
+	Route::post('image/upload','Admin\FileController@imageUpload')->name('image.upload');
