@@ -16,5 +16,9 @@ class DatabaseSeeder extends Seeder
         //factory(App\Topic::class,200)->create();
         //factory(App\Category::class,20)->create();
         factory(App\User::class,20)->create();
+        factory(App\SpiderTarget::class,1)->create();
+
+        $this->call(CategoriesTableSeeder::class);
+        
     }
 }

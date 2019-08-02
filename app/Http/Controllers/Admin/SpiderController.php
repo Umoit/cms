@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use QL\QueryList;
 use Image;
 use App\Article;
-
+use File;
 
 
 
@@ -96,6 +96,8 @@ class SpiderController extends Controller
 
     //生成任务
     public function createSpiderJob(Request $request,$id){
+
+
         $spiderTarget = SpiderTarget::findOrFail($id);
 
         $rule = json_decode($spiderTarget['rule'],true);
@@ -144,6 +146,10 @@ class SpiderController extends Controller
 
          
             $jobData = Querylist::get($url)->rules($child_rule)->queryData();
+
+
+            $path = public_path('/article/thum/');
+            File::makeDirectory($path,0777, true, true);
             
                 try {     
 
@@ -170,7 +176,7 @@ class SpiderController extends Controller
                         // 插入水印, 水印位置在原图片的右下角, 距离下边距 10 像素, 距离右边距 15 像素
                         //$img->insert('images/watermark.png', 'bottom-right', 15, 10);
                          
-                        $img->save(public_path('spider/thum/'.md5($key).'.jpg'));
+                        $img->save(public_path('article/thum/'.md5($key).'.jpg'));
                             $create_num++;
                             // item wasn't found and have been created in the database
                         } 
@@ -255,7 +261,7 @@ class SpiderController extends Controller
         $DImage = new DImage();  //QueryList4 不再支持扩展库，直接new使用。
         $rs = $DImage->run([
             'content' => $content,    //content为爬取的文章内容
-            'image_path' =>'/spider/',  //图片目标地址
+            'image_path' =>'/article/',  //图片目标地址
             'www_root' => public_path()           //绝对路径
         ]);
         return $rs[0];

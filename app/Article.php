@@ -25,9 +25,13 @@ class Article extends Model
         return $this->belongsTo(Admin::class);
     }
 
-    static function getArticleByCat($id,$num=10){
-      
-        return Article::where('category_id',$id)->take($num)->get();
+    static function getArticleByCat($id=0,$num=10){
+        if ($id == 0) {
+            return Article::latest('created_at')->take($num)->get();
+        }else{
+            return Article::where('parent_id',$id)->take($num)->get();
+
+        }
     }
 
     public function tags()

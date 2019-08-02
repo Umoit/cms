@@ -56,3 +56,12 @@ $factory->define(App\Admin::class, function (Faker $faker) {
 //     ];
 // });
 
+$factory->define(App\SpiderTarget::class, function (Faker $faker) {
+
+    return [
+        'name' => "vpgame",
+        'url' => "http://www.vpgame.com/news",
+        'rule' => '{ "title": [".article-item>.article-item-detail >.item-title","text"], "url": [".article-item>.article-item-detail >.item-title","href"], "image": [".article-item>.imgBox>img","src"] } ',
+        'child_rule' => '{ "content": [".article-content","text","img p"] }',
+    ];
+});
