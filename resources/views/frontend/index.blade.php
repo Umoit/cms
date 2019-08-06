@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div>
+<div class="main">
 
 <section class="banner text-center">
     <div class="container">
@@ -78,19 +78,24 @@
       <div class="row">
           @foreach(App\Article::getArticleByCat(0,3) as $article)
             <div class="col-md-4">
+
+            
               <div class="card mb-4 shadow-sm">
-                <img src="{{$article->img}}" width="100%;" height="200px">
+                <a href="{{url('article',$article->id)}}"><img src="{{$article->img}}" width="100%;" height="200px"></a>
                 <div class="card-body">
                   <p class="card-text">{{$article->title}}</p>
                   <div class="d-flex justify-content-between align-items-center">
+                    
+                    <small class="text-muted">{{$article->created_at->format('Y-m-d')}}</small>
+
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <a href="{{url('article',$article->id)}}"><button type="button" class="btn btn-sm btn-outline-secondary">浏览更多</button></a>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
+
+
             </div>
           @endforeach
 
@@ -109,7 +114,6 @@
 
 
 
-</div>
 
   
 

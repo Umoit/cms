@@ -26,3 +26,18 @@ footer{
 	font-size: 15px;
 
 }
+
+.blog-post-title{
+	padding-top: 20px
+}
+.blog-sidebar{
+	padding-top: 20px;
+}
+.sidebar-info ,.sidebar-tag, .sidebar-menu{
+	padding: 10px;
+}
+.sidebar-tag ol li {
+	padding-left: 5px;
+	float: left;
+
+}

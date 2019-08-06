@@ -15,7 +15,7 @@
               </li>
           <?php $__currentLoopData = App\Category::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <li class="nav-item <?php echo e(Request::is('$category->name') ? 'active' : ''); ?>">
-                <a class="nav-link" href="#"><?php echo e($category->name); ?></a>
+                <a class="nav-link" href="<?php echo e(url('/',$category->url_name)); ?>"><?php echo e($category->name); ?></a>
               </li>
           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
@@ -23,7 +23,7 @@
         
       </ul>
       <form class="form-inline my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control" type="text" placeholder="搜索" aria-label="Search">
       </form>
     </div>
   </div>

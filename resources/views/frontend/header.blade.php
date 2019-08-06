@@ -15,7 +15,7 @@
               </li>
           @foreach(App\Category::all() as $category)
               <li class="nav-item {{ Request::is('$category->name') ? 'active' : '' }}">
-                <a class="nav-link" href="#">{{$category->name }}</a>
+                <a class="nav-link" href="{{ url('/',$category->url_name)}}">{{$category->name }}</a>
               </li>
           @endforeach
 
@@ -23,7 +23,7 @@
         
       </ul>
       <form class="form-inline my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control" type="text" placeholder="搜索" aria-label="Search">
       </form>
     </div>
   </div>

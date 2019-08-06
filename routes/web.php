@@ -38,6 +38,9 @@ Route::resource('category','TopicController');
 //文章
 Route::get('article/{article}','ArticleController@show')->name('articleShow');
 
+//magento
+Route::get('case','ArticleController@show');
+
 
 
 //后台
