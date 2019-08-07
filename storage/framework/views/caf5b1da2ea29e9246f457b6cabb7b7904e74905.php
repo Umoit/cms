@@ -1,3 +1,7 @@
+<?php $__env->startSection('keywords'); ?><?php echo e($article->title); ?><?php $__env->stopSection(); ?>
+<?php $__env->startSection('description'); ?><?php echo e($article->title); ?><?php $__env->stopSection(); ?>
+
+
 <?php $__env->startSection('content'); ?>
 
 

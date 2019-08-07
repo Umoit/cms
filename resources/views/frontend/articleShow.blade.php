@@ -1,5 +1,9 @@
 @extends('frontend.global')
 
+@section('keywords'){{$article->title}}@endsection
+@section('description'){{$article->title}}@endsection
+
+
 @section('content')
 
 
