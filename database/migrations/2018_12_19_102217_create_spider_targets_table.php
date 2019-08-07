@@ -15,10 +15,10 @@ class CreateSpiderTargetsTable extends Migration
     {
         Schema::create('spider_targets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->index()->comment('名称');
-            $table->string('url')->index()->comment('链接');
-            $table->string('rule',255)->comment('规则');
-            $table->string('child_rule',255)->comment('子规则');
+            $table->string('name');
+            $table->string('url');
+            $table->string('rule',255);
+            $table->string('child_rule',255);
             $table->timestamps();
         });
     }

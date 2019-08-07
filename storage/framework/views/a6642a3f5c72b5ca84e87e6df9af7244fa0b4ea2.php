@@ -6,7 +6,7 @@
   <title><?php echo $__env->yieldContent('title', ''); ?>尤木科技-Wordpress Magento文章分享</title>
   
   <meta name="keywords" content="<?php echo $__env->yieldContent('keywords', ''); ?>尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计，Wordpress Magento网站建设 web方案">
-  <meta name="description" content="<?php echo $__env->yieldContent('description', ''); ?>尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设 web方案">
+  <meta name="description" content="<?php echo $__env->yieldContent('description', ''); ?>尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设,Magento Wordpress方案">
  
   
   <link rel="stylesheet" href="<?php echo e(asset('bootstrap-4.3.1/css/bootstrap.min.css')); ?>"  />
