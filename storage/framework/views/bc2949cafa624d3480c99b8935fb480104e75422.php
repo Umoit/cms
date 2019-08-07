@@ -13,6 +13,9 @@
                   
                     
                   </ul>
-                  <p class="copy-right">© 2017-2019 Company Name</p>
+              <a class="logo_link" href="<?php echo e(url('/')); ?>">
+                <img alt="logo"  class="logo" src="<?php echo e(asset('frontend/img/logo-dark.png')); ?>">
+              </a>
+                  <p class="copy-right">© Copyright 2017 umoit.com   <a href="">粤ICP备17025826号 </a></p>
             </div>
         </footer>

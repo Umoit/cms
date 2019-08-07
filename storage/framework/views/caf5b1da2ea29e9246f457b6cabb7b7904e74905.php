@@ -32,8 +32,10 @@
   
 
       <nav class="blog-pagination">
-        <a class="btn btn-outline-primary" href="#">Older</a>
-        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+
+        <a class="btn btn-outline-primary" href="#">上一篇</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">下一篇</a>
+
       </nav>
 
     </div><!-- /.blog-main -->
@@ -41,12 +43,12 @@
     <aside class="col-md-4 blog-sidebar">
 
       <div class="sidebar-info">
-        <h4 class="font-italic">About</h4>
+        <h4 class="sidebar-title">关于我们</h4>
         <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
       </div>
 
        <div class="sidebar-menu">
-        <h4 class="font-italic">Archives</h4>
+        <h4 class="sidebar-title">菜单</h4>
         <ol class="list-unstyled">
             <?php $__currentLoopData = \App\Category::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <li><a href="#" class=""><?php echo e($category->name); ?></a></li>
@@ -55,7 +57,7 @@
       </div>
 
       <div class="sidebar-tag">
-        <h4 class="font-italic">Archives</h4>
+        <h4 class="sidebar-title">标签</h4>
         <ol class="list-unstyled">
             <?php $__currentLoopData = \App\Tag::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <li><a href="#" class="btn btn-sm btn-primary"><?php echo e($tag->name); ?></a></li>

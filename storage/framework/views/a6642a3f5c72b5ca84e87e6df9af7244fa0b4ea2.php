@@ -11,6 +11,7 @@
   
   <link rel="stylesheet" href="<?php echo e(asset('bootstrap-4.3.1/css/bootstrap.min.css')); ?>"  />
   <link rel="stylesheet" href="<?php echo e(asset('frontend/css/global.css')); ?>"  />
+  <link rel="stylesheet" href="<?php echo e(asset('frontend/css/font.css')); ?>"  />
 	<?php echo $__env->yieldContent('before-content'); ?>
 </head>
 

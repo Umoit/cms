@@ -17,46 +17,47 @@
   </section>
 
 <section class="service text-center">
+
   <div class="container">
 
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="title">Let's talk product</h2>
-            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+          <div class="home-title">
+                  <h2>我们的服务</h2>
           </div>
-        </div>
+        
 
-        <div class="features">
+        
           <div class="row">
+
             <div class="col-md-4">
+                    
               <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">chat</i>
+                <div class="icon ">
+                  <i class="icon-magento"></i>
                 </div>
-                <h4 class="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <h4 class="info-title">Magento</h4>
+                <p>Magento是一款新的专业开源电子商务平台，采用php进行开发，使用Zend Framework框架。设计得非常灵活，具有模块化架构体系和丰富的功能。易于与第三方应用系统无缝集成。</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="info">
-                <div class="icon icon-success">
-                  <i class="material-icons">verified_user</i>
+                <div class="icon ">
+                  <i class="icon-wordpress"></i>
                 </div>
-                <h4 class="info-title">Verified Users</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <h4 class="info-title">Wordpress</h4>
+                <p>WordPress是一款个人博客系统，并逐步演化成一款内容管理系统软件，它是使用PHP语言和MySQL数据库开发的,用户可以在支持 PHP 和 MySQL数据库的服务器上使用自己的博客。</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="info">
-                <div class="icon icon-danger">
-                  <i class="material-icons">fingerprint</i>
+                <div class="icon ">
+                  <i class="icon-laravel"></i>
                 </div>
-                <h4 class="info-title">Fingerprint</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <h4 class="info-title">Laravel</h4>
+                <p>Laravel是一套简洁、优雅的PHP Web开发框架。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。</p>
               </div>
             </div>
           </div>
-        </div>
+       
     
   </div>
 
@@ -64,13 +65,55 @@
 </section>
 
 
+<section class="show text-center">
 
 
-  <section class="article">
+        <div class="container">
+
+        <div class="home-title">
+                  <h2>形象展示</h2>
+          </div>
+        
+
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="am-icon-users"></i>
+                    <div class="info">
+                        <h3>319次</h3>
+                        <p>下载量</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="am-icon-users"></i>
+                    <div class="info">
+                        <h3>7217次</h3>
+                        <p>安装量</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="am-icon-users"></i>
+                    <div class="info">
+                        <h3>6319次</h3>
+                        <p>更新量</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+
+  <section class="article text-center">
     <div class="container">
       
 
-
+          <div class="home-title">
+                  <h2>最新文章</h2>
+          </div>
+        
 
 
 

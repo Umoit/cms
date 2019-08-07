@@ -11,6 +11,7 @@
   
   <link rel="stylesheet" href="{{asset('bootstrap-4.3.1/css/bootstrap.min.css')}}"  />
   <link rel="stylesheet" href="{{asset('frontend/css/global.css')}}"  />
+  <link rel="stylesheet" href="{{asset('frontend/css/font.css')}}"  />
 	@yield('before-content')
 </head>
 
