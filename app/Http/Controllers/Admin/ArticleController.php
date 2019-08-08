@@ -9,6 +9,9 @@ use App\Category;
 use App\Tag;
 use Illuminate\Support\Facades\Auth;
 
+use Image;
+use File;
+
 class ArticleController extends Controller
 {
 	public function __construct(){
@@ -55,12 +58,24 @@ class ArticleController extends Controller
 
         //dd($request['tags']);
         
+
+        $img = Image::make($request->img);
+        $filename = basename($request->img);
+        // 插入水印, 水印位置在原图片的右下角, 距离下边距 10 像素, 距离右边距 15 像素
+        //$img->insert('images/watermark.png', 'bottom-right', 15, 10);
+
+        $path = public_path('article/thum');
+        File::makeDirectory($path, $mode = 0777, true, true);
+        $img->save(public_path('article/thum/'.md5($filename).'.jpg'));
+
         $data = $this->validate($request, [
             'title'=>'required',
             'category_id'=> 'required',
             'content'=> 'required',
             'img'=> 'required',
         ]);
+        $data['img'] = 'article/thum/'.md5($filename).'.jpg';
+
 
         $data['admin_id'] = Auth::guard('admin')->id(); 
 
@@ -93,6 +108,18 @@ class ArticleController extends Controller
     public function update(Request $request,$id){
         $article = new Article();
 
+
+        $img = Image::make($request->img);
+        $filename = basename($request->img);
+        // 插入水印, 水印位置在原图片的右下角, 距离下边距 10 像素, 距离右边距 15 像素
+        //$img->insert('images/watermark.png', 'bottom-right', 15, 10);
+
+        $path = public_path('article/thum');
+        File::makeDirectory($path, $mode = 0777, true, true);
+        $img->save(public_path('article/thum/'.md5($filename).'.jpg'));
+
+
+
         //dd($request);
         $data = $this->validate($request, [
             'title'=>'required',
@@ -101,6 +128,8 @@ class ArticleController extends Controller
             'img'=> 'required'
         ]);
         $data['admin_id'] = Auth::guard('admin')->id(); 
+        $data['img'] = 'article/thum/'.md5($filename).'.jpg';
+        
 
         //var_dump($data);exit();
         // $path = " ";

@@ -35,15 +35,11 @@
                   <label name="img" class="col-sm-2 control-label">缩略图</label>
                   	<div class="col-sm-10 col-md-3">
                     
-                     <div ><img id="image_preview" style="padding-bottom:10px;" width="100%" src=" <?php if(isset($article->img)): ?> <?php echo e(url('/').$article->img); ?> <?php endif; ?>"></div> 
+                     <div ><img id="image_preview" style="padding-bottom:10px;" width="100%" src=" <?php if(isset($article->img)): ?><?php echo e(url($article->img)); ?> <?php endif; ?>"></div> 
                     
 
                     	<input type="file"  class="file" id="img_url" name="image_data"  accept="image/*" multiple>
-                   		<input type="hidden"  id="image" name="img"  value="
-                      <?php if(isset($article->img)): ?> 
-                      <?php echo e($article->img); ?>
-
-                    <?php endif; ?>">
+                   		<input type="hidden"  id="image" name="img"  value="<?php if(isset($article->img)): ?> <?php echo e($article->img); ?> <?php endif; ?>">
           			</div>
           	</div>
 

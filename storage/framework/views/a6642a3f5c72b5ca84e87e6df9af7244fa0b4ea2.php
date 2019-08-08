@@ -9,9 +9,11 @@
   <meta name="description" content="<?php echo $__env->yieldContent('description', ''); ?>尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设,Magento Wordpress方案">
  
   
-  <link rel="stylesheet" href="<?php echo e(asset('bootstrap-4.3.1/css/bootstrap.min.css')); ?>"  />
+  <link rel="stylesheet" href="<?php echo e(asset('bootstrap-4.3.1/css/bootstrap.css')); ?>"  />
+
   <link rel="stylesheet" href="<?php echo e(asset('frontend/css/global.css')); ?>"  />
   <link rel="stylesheet" href="<?php echo e(asset('frontend/css/font.css')); ?>"  />
+  
 	<?php echo $__env->yieldContent('before-content'); ?>
 </head>
 

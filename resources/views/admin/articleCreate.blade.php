@@ -37,14 +37,11 @@
                   <label name="img" class="col-sm-2 control-label">缩略图</label>
                   	<div class="col-sm-10 col-md-3">
                     
-                     <div ><img id="image_preview" style="padding-bottom:10px;" width="100%" src=" @if (isset($article->img)) {{url('/').$article->img}} @endif"></div> 
+                     <div ><img id="image_preview" style="padding-bottom:10px;" width="100%" src=" @if (isset($article->img)){{url($article->img)}} @endif"></div> 
                     
 
                     	<input type="file"  class="file" id="img_url" name="image_data"  accept="image/*" multiple>
-                   		<input type="hidden"  id="image" name="img"  value="
-                      @if (isset($article->img)) 
-                      {{$article->img}}
-                    @endif">
+                   		<input type="hidden"  id="image" name="img"  value="@if (isset($article->img)) {{$article->img}} @endif">
           			</div>
           	</div>
 

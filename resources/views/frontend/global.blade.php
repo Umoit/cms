@@ -9,9 +9,11 @@
   <meta name="description" content="@yield('description', '')尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设,Magento Wordpress方案">
  
   
-  <link rel="stylesheet" href="{{asset('bootstrap-4.3.1/css/bootstrap.min.css')}}"  />
+  <link rel="stylesheet" href="{{asset('bootstrap-4.3.1/css/bootstrap.css')}}"  />
+
   <link rel="stylesheet" href="{{asset('frontend/css/global.css')}}"  />
   <link rel="stylesheet" href="{{asset('frontend/css/font.css')}}"  />
+  
 	@yield('before-content')
 </head>
 

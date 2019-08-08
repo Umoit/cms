@@ -22,11 +22,11 @@ class FileController extends Controller
         ]);
 
         $image = $request->file('image_data');
-        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+        $input['imagename'] = $image->getClientOriginalName();
         $destinationPath = public_path('/uploads');
         $image->move($destinationPath, $input['imagename']);
 
-        $path = '/uploads/'.$input['imagename'];
+        $path =url( 'uploads/'.$input['imagename']);
 
         return (['code' => 0,'path' => $path]);
 

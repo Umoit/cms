@@ -120,9 +120,14 @@ class SpiderController extends Controller
 
         $create_num = 0;
 
-        foreach ($data as $key => $value) {
+
+
+        foreach ($data as $value) {
 
             if (stripos($value['url'], 'http://')===0) {
+               $url = $value['url'];
+            }
+            elseif(stripos($value['url'], 'https://')===0){
                $url = $value['url'];
             }
             elseif(stripos($value['url'], '/')===0){
@@ -138,7 +143,6 @@ class SpiderController extends Controller
             
            
 
-             
 
          
             $jobData = Querylist::get($url,[
@@ -206,31 +210,36 @@ class SpiderController extends Controller
 
     
     public function jobPost(Request $request){
-        //dd($request->content);
-        // 修改指定图片的大小
-        $img = Image::make($request->img);
-        //dd($img_link);
-        $filename = basename($request->img);
 
-        // 插入水印, 水印位置在原图片的右下角, 距离下边距 10 像素, 距离右边距 15 像素
-        //$img->insert('images/watermark.png', 'bottom-right', 15, 10);
+        if(!is_null($request->img)){
+            $img = Image::make($request->img);
+            $filename = basename($request->img);
+            // 插入水印, 水印位置在原图片的右下角, 距离下边距 10 像素, 距离右边距 15 像素
+            //$img->insert('images/watermark.png', 'bottom-right', 15, 10);
 
-        $path = public_path('articles/thum');
-        File::makeDirectory($path, $mode = 0777, true, true);
-         
-        $img->save(public_path('articles/thum/'.md5($filename).'.jpg'));
-
+            $path = public_path('article/thum');
+            File::makeDirectory($path, $mode = 0777, true, true);
+            $img->save(public_path('article/thum/'.md5($filename).'.jpg'));
+        }
+       
         
+
+
          
         $data = $this->validate($request, [
             'title'=>'required',
             'category_id'=> 'required',
             'content'=> 'required',
-            'img'=> 'required'
+            'img'=> ''
         ]);
 
         $data['admin_id'] = Auth::guard('admin')->id(); 
-        $data['img'] = 'articles/thum/'.md5($filename).'.jpg';
+        if(!is_null($request->img)){
+            $data['img'] = null;
+        }
+        
+        $data['img'] = 'article/thum/'.md5($filename).'.jpg';
+
         $data['content']= $this->contentImg($request->content);
 
 
@@ -256,6 +265,8 @@ class SpiderController extends Controller
 
 
     public function tytest(){
+            $img = Image::make('http://cms.test/uploads/QQ图片20190808124720.png');
+
           $data = QueryList::get('http://www.vpgame.com/news/article/262137')
               // 设置采集规则
               ->rules([ 
@@ -273,6 +284,7 @@ class SpiderController extends Controller
         $ql = QueryList::html($content);
         $rules = [ 'url' => ['img','src']];
         $imgs = $ql->rules($rules)->queryData();
+
 
         foreach ($imgs as $data) {
 
