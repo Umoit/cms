@@ -32,7 +32,9 @@ class IndexController extends Controller
             [
             'captcha.captcha' => '验证码不正确',
             ]);
+
    		if (Auth::guard('admin')->attempt(['email'=>$request->email,'password'=>$request->password])) {
+
    			return redirect()->intended(route('admin.dashboard'));
    		}else{
    			//return back()->with(['error' => '账号密码错误!']);

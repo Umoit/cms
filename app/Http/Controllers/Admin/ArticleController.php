@@ -44,6 +44,7 @@ class ArticleController extends Controller
 		
     }
 
+    
     public function create(Article $article){
         $categories = Category::all();
     	$tags = Tag::all();

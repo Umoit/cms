@@ -234,11 +234,16 @@ class SpiderController extends Controller
         ]);
 
         $data['admin_id'] = Auth::guard('admin')->id(); 
-        if(!is_null($request->img)){
+        
+
+        if(is_null($request->img)){
+
             $data['img'] = null;
+        }else{
+            $data['img'] = 'article/thum/'.md5($filename).'.jpg';
+
         }
         
-        $data['img'] = 'article/thum/'.md5($filename).'.jpg';
 
         $data['content']= $this->contentImg($request->content);
 

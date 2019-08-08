@@ -19,5 +19,13 @@ class ArticleController extends Controller
 		
     }
 
-    
+    public function findArticle($url_name){
+
+    	$article = Article::where('url_name',$url_name)->first();
+
+        return view('frontend.articleShow',compact('article'));
+        
+
+    }
+
 }

@@ -57,13 +57,11 @@
           <!-- nav -->
           <nav id="left-nav" class="navi clearfix">
             <ul class="nav">
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>aa</span>
-              </li>
+              
               <li class="<?php echo e(Request::is('admin/dashboard*') ? 'active' : ''); ?>">
-                <a href class="auto">      
+                <a href="<?php echo e(route('admin.dashboard')); ?>" class="auto">      
                   <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw  text"></i>
                   </span>
                   <i class="fa fa-dashboard"></i>
                   <span class="font-bold">主面板</span>
@@ -125,40 +123,7 @@
               </li>
 
 
-              <li class="<?php echo e(Request::is('admin/match*') ? 'active' : ''); ?> ">
-                <a href class="auto">      
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <b class="badge bg-info pull-right">3</b>
-                  <i class="fa fa-gamepad"></i>
-                  <span>赛事管理</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href="<?php echo e(route('match.index')); ?>">
-                      <span>赛事列表</span>
-                    </a>
-                  </li>
-                   <li class="<?php echo e(Request::is('admin/match') ? 'active' : ''); ?>">
-                    <a href="<?php echo e(route('match.index')); ?>">
-                      <span>赛事列表</span>
-                    </a>
-                  </li>
-                  <li class="<?php echo e(Request::is('admin/match/*') ? 'active' : ''); ?>">
-                    <a href="<?php echo e(route('match.create')); ?>">
-                      <span>添加赛事</span>
-                    </a>
-                  </li>
-                  <li class="<?php echo e(Request::is('admin/category*') ? 'active' : ''); ?>">
-                    <a href="<?php echo e(route('category.index')); ?>">
-                      <span>赛事分类</span>
-                    </a>
-                  </li>
-                      
-                </ul>
-              </li>
+             
 
                <li class="<?php echo e(Request::is('admin/spider*') ? 'active' : ''); ?>">
                 <a href class="auto">      
@@ -167,7 +132,7 @@
                     <i class="fa fa-fw fa-angle-down text-active"></i>
                   </span>
                   <b class="badge bg-info pull-right">3</b>
-                  <i class="fa fa-list"></i>
+                  <i class="fa fa-send"></i>
                   <span>采集系统</span>
                 </a>
                 <ul class="nav nav-sub dk">

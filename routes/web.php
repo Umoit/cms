@@ -38,8 +38,12 @@ Route::resource('category','TopicController');
 //文章
 Route::get('article/{article}','ArticleController@show')->name('articleShow');
 
-//magento
-Route::get('case','ArticleController@show');
+//独立页
+Route::get('magento',function(){
+	$articles = App\Article::where('category_id',1)->get();
+    return view('frontend.articleList',compact('articles'));
+});
+
 
 
 
@@ -51,7 +55,7 @@ Route::post('admin/login','Admin\IndexController@postLogin')->name('admin.login'
 
 Route::group(['prefix' => 'admin'],function(){
 
-	Route::get('logout','Admin\IndexController@logout');
+	Route::get('logout','Admin\IndexController@logout')->name('admin.logout');
 	
 	Route::get('test','Admin\IndexController@test')->name('admin.test');
 

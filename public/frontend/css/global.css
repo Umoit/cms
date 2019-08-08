@@ -31,9 +31,12 @@ footer{
 	color: #333;
 
 }
+.blog-list{
+	padding-top: 30px
+}
 
-.blog-post-title{
-	padding-top: 20px
+.blog-main{
+	padding-top: 30px
 }
 .blog-sidebar{
 	padding-top: 20px;
@@ -114,4 +117,7 @@ pre code {
     white-space: pre-wrap;
     background-color: transparent;
     border-radius: 0;
+}
+.blog-list .article-thum{
+	padding: 10px;
 }
