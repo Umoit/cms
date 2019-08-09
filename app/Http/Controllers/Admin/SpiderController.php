@@ -219,6 +219,7 @@ class SpiderController extends Controller
 
             $path = public_path('article/thum');
             File::makeDirectory($path, $mode = 0777, true, true);
+            File::makeDirectory(public_path('article'), $mode = 0777, true, true);
             $img->save(public_path('article/thum/'.md5($filename).'.jpg'));
         }
        
