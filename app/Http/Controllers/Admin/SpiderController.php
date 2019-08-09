@@ -180,7 +180,7 @@ class SpiderController extends Controller
                    
                 } catch (\Illuminate\Database\QueryException $e) {
 
-                    Log::error($e->getMessage());
+                    echo $e->getMessage();
                 }
 
         }
