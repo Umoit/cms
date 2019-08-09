@@ -10,8 +10,8 @@
       <h1 class="banner-title">尤木科技</h1>
       <p class="lead text-muted">分享Magento Worpdress各种技术文章</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Magento</a>
-        <a href="#" class="btn btn-secondary my-2">Wordpress</a>
+        <a href="{{url('magento')}}" class="btn btn-primary my-2">Magento</a>
+        <a href="{{url('wordpress')}}" class="btn btn-secondary my-2">Wordpress</a>
       </p>
     </div>
   </section>
