@@ -125,9 +125,9 @@ pre code {
 .blog-post img{
 	max-width: 100%;
 }
-.blog-post h2{
+.blog-post h2 ,.h2{
 	    font-size: 1.3rem
 }
-.blog-post h3{
+.blog-post h3 , .h3{
 	    font-size: 1.1rem
 }
