@@ -6,7 +6,7 @@
                           </li>
                       @foreach(App\Category::all() as $category)
                           <li>
-                            <a href="#">{{$category->name }}</a>
+                            <a href="{{url($category->url_name)}}">{{$category->name }}</a>
                           </li>
                       @endforeach
 

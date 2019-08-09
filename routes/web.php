@@ -44,8 +44,17 @@ Route::get('magento',function(){
     return view('frontend.articleList',compact('articles'));
 });
 
+Route::get('wordpress',function(){
+    return view('frontend.comingSoon');
+});
 
+Route::get('case',function(){
+    return view('frontend.comingSoon');
+});
 
+Route::get('contact-us',function(){
+    return view('frontend.comingSoon');
+});
 
 //后台
 

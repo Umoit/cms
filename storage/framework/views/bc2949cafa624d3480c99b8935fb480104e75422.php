@@ -6,7 +6,7 @@
                           </li>
                       <?php $__currentLoopData = App\Category::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                           <li>
-                            <a href="#"><?php echo e($category->name); ?></a>
+                            <a href="<?php echo e(url($category->url_name)); ?>"><?php echo e($category->name); ?></a>
                           </li>
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
