@@ -45,7 +45,7 @@ html,body{
 好吧.还是随便你要不要真的确定返回吧<br>
     </p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+      <a href="{{url('/')}}" class="btn btn-lg btn-secondary">主页</a>
     </p>
 
 	</div>

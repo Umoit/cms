@@ -54,7 +54,7 @@
 
       <div class="sidebar-info">
         <h4 class="sidebar-title">关于我们</h4>
-        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设,Magento Wordpress方案</p>
       </div>
 
        <div class="sidebar-menu">
