@@ -84,7 +84,9 @@
   </div>
   <div class="text-center">
     <p>
-  <small class="text-muted">Web app framework base on Bootstrap and AngularJS<br>&copy; 2014</small>
+
+    <p class="copy-right">© Copyright 2017 umoit.com   <br><a href="http://www.beian.miit.gov.cn/">粤ICP备17025826号 </a></p>
+
 </p>
   </div>
 </div>
