@@ -9,8 +9,8 @@
       <h1 class="banner-title">尤木科技</h1>
       <p class="lead text-muted">分享Magento Worpdress各种技术文章</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Magento</a>
-        <a href="#" class="btn btn-secondary my-2">Wordpress</a>
+        <a href="<?php echo e(url('magento')); ?>" class="btn btn-primary my-2">Magento</a>
+        <a href="<?php echo e(url('wordpress')); ?>" class="btn btn-secondary my-2">Wordpress</a>
       </p>
     </div>
   </section>
@@ -25,7 +25,9 @@
 
         <div class="article-thum">
             <?php if($article->img): ?>
-            <img class=" rounded" src="<?php echo e($article->img); ?>"/ width="160" height="100">
+            <a href="<?php echo e(url('article',$article->id)); ?>">
+              <img class=" rounded" src="<?php echo e($article->img); ?>" width="160" height="100" />
+            </a>
             <?php else: ?>
             <svg class="bd-placeholder-img" width="160" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
             <?php endif; ?>
@@ -34,7 +36,7 @@
           <div class="col p-3">
             <div class="mb-1 text-muted"><?php echo e($article->created_at->format('Y-m-d')); ?></div>
             <p class="card-text mb-auto"><?php echo e($article->title); ?></p>
-            <a href="#">阅读全文</a>
+            <a href="<?php echo e(url('article',$article->id)); ?>">阅读全文</a>
           </div>
           
         </div>

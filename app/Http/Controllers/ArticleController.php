@@ -14,8 +14,12 @@ class ArticleController extends Controller
 
     //查看文章
     public function show(Article $article){
+
+        $previous = Article::where('id', '<', $article->id)->max('id');
+
+        $next = Article::where('id', '>', $article->id)->min('id');
         
-    	return view('frontend.articleShow',compact('article'));
+    	return view('frontend.articleShow',compact('article','next','previous'));
 		
     }
 

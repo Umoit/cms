@@ -30,7 +30,9 @@
 
         <div class="article-thum">
             @if($article->img)
-            <img class=" rounded" src="{{$article->img}}"/ width="160" height="100">
+            <a href="{{url('article',$article->id)}}">
+              <img class=" rounded" src="{{$article->img}}" width="160" height="100" />
+            </a>
             @else
             <svg class="bd-placeholder-img" width="160" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
             @endif
@@ -39,7 +41,7 @@
           <div class="col p-3">
             <div class="mb-1 text-muted">{{$article->created_at->format('Y-m-d')}}</div>
             <p class="card-text mb-auto">{{$article->title}}</p>
-            <a href="#">阅读全文</a>
+            <a href="{{url('article',$article->id)}}">阅读全文</a>
           </div>
           
         </div>

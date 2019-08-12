@@ -13,8 +13,8 @@
       <h1 class="banner-title">尤木科技</h1>
       <p class="lead text-muted">分享Magento Worpdress各种技术文章</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Magento</a>
-        <a href="#" class="btn btn-secondary my-2">Wordpress</a>
+        <a href="<?php echo e(url('magento')); ?>" class="btn btn-primary my-2">Magento</a>
+        <a href="<?php echo e(url('wordpress')); ?>" class="btn btn-secondary my-2">Wordpress</a>
       </p>
     </div>
   </section>
@@ -27,7 +27,7 @@
 
       <div class="blog-post">
         <h2 class="blog-post-title"><?php echo e($article->title); ?></h2>
-        <p class="blog-post-meta"><?php echo e($article->created_at); ?> <a href="#"><?php echo e($article->admin_id); ?></a></p>
+        <p class="blog-post-meta"><?php echo e($article->created_at->format("Y-m-d H:i")); ?> <?php echo e(App\Admin::getName($article->admin_id)); ?></p>
 
         <?php echo $article->content; ?>
 
@@ -37,8 +37,8 @@
 
       <nav class="blog-pagination">
 
-        <a class="btn btn-outline-primary" href="#">上一篇</a>
-        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">下一篇</a>
+        <a class="btn btn-outline-primary <?php if(!$previous): ?>: disabled <?php endif; ?>" href="<?php echo e(url('article',$previous)); ?>">上一篇</a>
+        <a class="btn btn-outline-primary <?php if(!$next): ?>: disabled <?php endif; ?>" href="<?php echo e(url('article',$next)); ?>" >下一篇</a>
 
       </nav>
 
@@ -48,7 +48,9 @@
 
       <div class="sidebar-info">
         <h4 class="sidebar-title">关于我们</h4>
-        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>
+        尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设,Magento Wordpress方案
+        </p>
       </div>
 
        <div class="sidebar-menu">

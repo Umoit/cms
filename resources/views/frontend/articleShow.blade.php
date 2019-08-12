@@ -29,7 +29,7 @@
 
       <div class="blog-post">
         <h2 class="blog-post-title">{{$article->title}}</h2>
-        <p class="blog-post-meta">{{$article->created_at}} <a href="#">{{$article->admin_id}}</a></p>
+        <p class="blog-post-meta">{{$article->created_at->format("Y-m-d H:i")}} {{App\Admin::getName($article->admin_id)}}</p>
 
         {!!$article->content!!}
       </div>
@@ -38,8 +38,8 @@
 
       <nav class="blog-pagination">
 
-        <a class="btn btn-outline-primary" href="#">上一篇</a>
-        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">下一篇</a>
+        <a class="btn btn-outline-primary @if(!$previous): disabled @endif" href="{{url('article',$previous)}}">上一篇</a>
+        <a class="btn btn-outline-primary @if(!$next): disabled @endif" href="{{url('article',$next)}}" >下一篇</a>
 
       </nav>
 
@@ -49,7 +49,9 @@
 
       <div class="sidebar-info">
         <h4 class="sidebar-title">关于我们</h4>
-        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>
+        尤木科技,Wordpress Magento文章分享,Wordpress Magento网站设计,Wordpress Magento网站建设,Magento Wordpress方案
+        </p>
       </div>
 
        <div class="sidebar-menu">
