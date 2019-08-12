@@ -119,7 +119,7 @@
 
             
       <div class="row">
-          @foreach(App\Article::getArticleByCat(0,3) as $article)
+          @foreach(App\Article::getArticleByCat(0,6) as $article)
             <div class="col-md-4">
 
             
