@@ -45,8 +45,11 @@ Route::get('magento',function(){
 });
 
 Route::get('wordpress',function(){
-    return view('frontend.comingSoon');
+	$articles = App\Article::where('category_id',2)->get();
+    return view('frontend.articleList',compact('articles'));
 });
+
+
 
 Route::get('case',function(){
     return view('frontend.comingSoon');
