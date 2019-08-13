@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="{{asset('frontend/css/global.css')}}"  />
   <link rel="stylesheet" href="{{asset('frontend/css/font.css')}}"  />
   
+  <link rel="shortcut icon" href="{{asset('frontend/css/font.css')}}"/>
+  
 	@yield('before-content')
 </head>
 
