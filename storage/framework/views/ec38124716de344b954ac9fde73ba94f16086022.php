@@ -117,7 +117,30 @@
 
             
       <div class="row">
-          <?php $__currentLoopData = App\Article::getArticleByCat(0,6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php $__currentLoopData = App\Article::getArticleByCat(1,3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="col-md-4">
+
+            
+              <div class="card mb-4 shadow-sm">
+                <a href="<?php echo e(url('article',$article->id)); ?>"><img src="<?php echo e($article->img); ?>" width="100%;" height="200px"></a>
+                <div class="card-body">
+                  <p class="card-text"><?php echo e($article->title); ?></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <small class="text-muted"><?php echo e($article->created_at->format('Y-m-d')); ?></small>
+
+                    <div class="btn-group">
+                      <a href="<?php echo e(url('article',$article->id)); ?>"><button type="button" class="btn btn-sm btn-outline-secondary">浏览更多</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+           <?php $__currentLoopData = App\Article::getArticleByCat(2,3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-4">
 
             
