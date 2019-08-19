@@ -117,7 +117,7 @@
 
             
       <div class="row">
-          <?php $__currentLoopData = App\Article::getArticleByCat(0,3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php $__currentLoopData = App\Article::getArticleByCat(0,6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-4">
 
             

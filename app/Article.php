@@ -29,7 +29,7 @@ class Article extends Model
         if ($id == 0) {
             return Article::latest('created_at')->take($num)->get();
         }else{
-            return Article::where('parent_id',$id)->take($num)->get();
+            return Article::where('id',$id)->take($num)->get();
 
         }
     }

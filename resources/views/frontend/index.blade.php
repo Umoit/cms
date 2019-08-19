@@ -119,7 +119,30 @@
 
             
       <div class="row">
-          @foreach(App\Article::getArticleByCat(0,6) as $article)
+          @foreach(App\Article::getArticleByCat(1,3) as $article)
+            <div class="col-md-4">
+
+            
+              <div class="card mb-4 shadow-sm">
+                <a href="{{url('article',$article->id)}}"><img src="{{$article->img}}" width="100%;" height="200px"></a>
+                <div class="card-body">
+                  <p class="card-text">{{$article->title}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <small class="text-muted">{{$article->created_at->format('Y-m-d')}}</small>
+
+                    <div class="btn-group">
+                      <a href="{{url('article',$article->id)}}"><button type="button" class="btn btn-sm btn-outline-secondary">浏览更多</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          @endforeach
+
+           @foreach(App\Article::getArticleByCat(2,3) as $article)
             <div class="col-md-4">
 
             

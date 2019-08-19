@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="<?php echo e(asset('frontend/css/global.css')); ?>"  />
   <link rel="stylesheet" href="<?php echo e(asset('frontend/css/font.css')); ?>"  />
   
+  <link rel="shortcut icon" href="<?php echo e(asset('frontend/css/font.css')); ?>"/>
+  
 	<?php echo $__env->yieldContent('before-content'); ?>
 </head>
 
