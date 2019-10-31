@@ -7,7 +7,7 @@
 
 <section class="banner text-center">
     <div class="container">
-      <h1 class="banner-title">尤木科技</h1>
+      <h1 class="banner-title">尤木Umoit</h1>
       <p class="lead text-muted">分享Magento Worpdress各种技术文章</p>
       <p>
         <a href="{{url('magento')}}" class="btn btn-primary my-2">Magento</a>
